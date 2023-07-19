@@ -1,0 +1,13 @@
+.toast{
+    border: 1px solid gray;
+    padding: 0px 30px 0px;
+    background-color: rgb(155, 241, 155);
+    font-weight: 600;
+    width: fit-content;
+}
+
+.toast-position{
+    position: fixed;
+    top: 20px;
+    right: 20px
+}
