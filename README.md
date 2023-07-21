@@ -1,2 +1,2 @@
 # toaster
-Custom toast using react context
+Custom toast using react context and redux
