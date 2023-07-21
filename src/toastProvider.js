@@ -1,24 +1,15 @@
-import React, { createContext, useState } from "react";
+import React, { createContext } from "react";
 import Toast from "./toast/toast";
+import { useSelector } from "react-redux";
 
 const toastContext = createContext();
 const ToastProvider = ({ children }) => {
-  const [message, setMessage] = useState("");
-
-  const setter = (msg) => {
-    console.log(msg);
-    setMessage(msg);
-  };
-
-  const values = {
-    message,
-    setter,
-  };
+  const msg = useSelector((state) => state.changeMessage);
   return (
-    <toastContext.Provider value={values}>
-      <Toast msg={message} />
+    <>
+      <Toast msg={msg.message} />
       {children}
-    </toastContext.Provider>
+    </>
   );
 };
 
